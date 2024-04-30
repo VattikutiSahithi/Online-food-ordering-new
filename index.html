@@ -8,49 +8,44 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>Menu</h1>
-    
-    <!-- Login and Register Buttons/Links -->
-    <div class="auth-buttons">
-        <!-- Change the onclick event to a function call -->
-        <button class="btn" onclick="redirectToLogin()">Login</button>
-        <button class="btn" onclick="location.href='register.html'">Register</button>
+<header>
+    <!-- Profile and cart -->
+    <div class="profile-cart">
+        <!-- Profile information -->
+        <div class="profile-info">
+            <p>Welcome, Username</p>
+            <!-- Add link to user's orders -->
+            <a href="orders.html">My Orders</a>
+        </div>
+        <!-- Cart -->
+        <div class="cart">
+            <!-- Add icon for cart -->
+            <img src="cart-icon.png" alt="Cart">
+            <!-- Add link to view cart -->
+            <a href="cart.html">View Cart</a>
+        </div>
     </div>
+</header>
+
+<div class="container">
+    <!-- Categories and food items -->
+    <div class="category">
+        <h2>Desserts</h2>
+        <div class="food-items">
+            <!-- Add images and names of desserts with links to their respective pages -->
+            <div class="food-item">
+                <img src="dessert1.jpg" alt="Dessert 1">
+                <p>Vanilla Ice Cream</p>
+            </div>
+            <div class="food-item">
+                <img src="dessert2.jpg" alt="Dessert 2">
+                <p>Chocolate Cake</p>
+            </div>
+            <!-- Add more food items -->
+        </div>
+    </div>
+    <!-- Add more categories and food items -->
 </div>
-
-<script>
-fetch('menu.json')
-  .then(response => response.json())
-  .then(data => {
-    data.forEach(item => {
-      const menuItem = document.createElement('div');
-      menuItem.classList.add('menu-item');
-
-      const title = document.createElement('h2');
-      title.textContent = item.name;
-
-      const description = document.createElement('p');
-      description.textContent = item.description;
-
-      const button = document.createElement('button');
-      button.classList.add('btn');
-      button.textContent = 'Order Now';
-
-      menuItem.appendChild(title);
-      menuItem.appendChild(description);
-      menuItem.appendChild(button);
-
-      document.querySelector('.container').appendChild(menuItem);
-    });
-  })
-  .catch(error => console.error('Error fetching menu data:', error));
-
-// Function to redirect to the login page
-function redirectToLogin() {
-    window.location.href = 'login.html';
-}
-</script>
 
 </body>
 </html>
