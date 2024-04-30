@@ -13,7 +13,8 @@
     
     <!-- Login and Register Buttons/Links -->
     <div class="auth-buttons">
-        <button class="btn" onclick="location.href='login.html'">Login</button>
+        <!-- Change the onclick event to a function call -->
+        <button class="btn" onclick="redirectToLogin()">Login</button>
         <button class="btn" onclick="location.href='register.html'">Register</button>
     </div>
 </div>
@@ -44,6 +45,11 @@ fetch('menu.json')
     });
   })
   .catch(error => console.error('Error fetching menu data:', error));
+
+// Function to redirect to the login page
+function redirectToLogin() {
+    window.location.href = 'login.html';
+}
 </script>
 
 </body>
