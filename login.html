@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Online Food Ordering System</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -23,6 +23,22 @@
     </form>
     <p>Don't have an account? <a href="register.html">Register</a></p>
 </div>
+
+<script>
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    // Fetch the username and password from the form
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    
+    // Perform your authentication logic here (e.g., sending a request to a server-side endpoint)
+    // For demonstration purposes, assume the user is authenticated
+    
+    // Redirect to the menu page (index.html) after successful login
+    window.location.href = 'index.html';
+});
+</script>
 
 </body>
 </html>
