@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Classic Burger",
+        "description": "A delicious burger served with fries"
+    },
+    {
+        "name": "Margherita Pizza",
+        "description": "Freshly baked pizza with tomato, mozzarella, and basil"
+    },
+    {
+        "name": "Chicken Caesar Salad",
+        "description": "Healthy salad with grilled chicken, lettuce, croutons, and Caesar dressing"
+    }
+]
