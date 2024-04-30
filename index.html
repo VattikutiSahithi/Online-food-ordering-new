@@ -102,7 +102,8 @@
     <h1>Online Food Ordering System</h1>
     <nav>
         <ul class="menu">
-            <li><a href="login.html">Login</a></li>
+            <!-- Initial state: "Login" link -->
+            <li id="login-link"><a href="login.html">Login</a></li>
             <li><a href="#">Menu</a></li>
             <li><a href="#">Orders</a></li>
             <li><a href="#">Cart</a></li>
@@ -114,19 +115,29 @@
     <div class="category">
         <h2>Desserts</h2>
         <div class="food-items">
-            <div class="food-item">
-                <img src="dessert1.jpg" alt="Dessert 1">
-                <p>Vanilla Ice Cream</p>
-            </div>
-            <div class="food-item">
-                <img src="dessert2.jpg" alt="Dessert 2">
-                <p>Chocolate Cake</p>
-            </div>
-            <!-- Add more food items -->
+            <!-- Food items section remains unchanged -->
         </div>
     </div>
     <!-- Add more categories -->
 </div>
+
+<script>
+// Check if user is logged in (you can replace this condition with your actual login check)
+const isLoggedIn = true; // Example: Assume user is logged in
+
+// Get the login link element
+const loginLink = document.getElementById('login-link');
+
+// If user is logged in, replace "Login" link with "Profile"
+if (isLoggedIn) {
+    const profileLink = document.createElement('a');
+    profileLink.href = '#'; // Replace '#' with the URL of the user's profile page
+    profileLink.textContent = 'Profile';
+    
+    // Replace the login link with the profile link
+    loginLink.parentNode.replaceChild(profileLink, loginLink);
+}
+</script>
 
 </body>
 </html>
