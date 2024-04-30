@@ -1,4 +1,4 @@
-/* Existing styles */
+/* Common styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,35 +7,48 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-h1 {
+/* Login box styles */
+.login-box {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h2 {
     text-align: center;
     color: #343a40;
 }
 
-.menu-item {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
+.login-box .form-group {
     margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.menu-item h2 {
-    color: #343a40;
+.login-box label {
+    display: block;
+    font-weight: bold;
 }
 
-.menu-item p {
-    color: #6c757d;
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
+.login-box .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
     font-size: 16px;
     border: none;
     border-radius: 4px;
@@ -45,39 +58,84 @@ h1 {
     transition: background-color 0.3s;
 }
 
-.btn:hover {
+.login-box .btn:hover {
     background-color: #0056b3;
 }
 
-/* New styles for login and registration pages */
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-p {
+.login-box p {
     text-align: center;
 }
 
-p a {
+.login-box p a {
     color: #007bff;
     text-decoration: none;
 }
 
-p a:hover {
+.login-box p a:hover {
     text-decoration: underline;
+}
+
+/* Header styles */
+header {
+    background-color: #343a40;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-cart {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info {
+    color: #fff;
+    margin-right: 20px;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.cart a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Category styles */
+.category {
+    margin-top: 40px;
+}
+
+.category h2 {
+    color: #343a40;
+}
+
+.food-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.food-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.food-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.food-item p {
+    margin-top: 10px;
+    text-align: center;
 }
