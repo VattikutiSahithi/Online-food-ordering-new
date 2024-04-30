@@ -16,6 +16,19 @@
             background-color: #343a40;
             padding: 10px 20px;
             color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .login-link {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .login-link:hover {
+            text-decoration: underline;
         }
 
         .container {
@@ -63,29 +76,13 @@
             text-align: center;
             color: #6c757d;
         }
-
-        .login-link {
-            text-align: right;
-            margin-bottom: 20px;
-        }
-
-        .login-link a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .login-link a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Online Food Ordering System</h1>
-    <div class="login-link">
-        <a href="login.html">Login</a>
-    </div>
+    <a class="login-link" href="login.html">Login</a>
 </header>
 
 <div class="container">
